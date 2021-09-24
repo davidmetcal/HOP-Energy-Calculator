@@ -46,7 +46,7 @@ const EScooter = (props) => {
                     <Grid  className="productCard" item xs={12} sm={6} md={4} key={index}>
                     <Item
                     onClick={() => scooterClicked(bike)}>
-                    <img src={bike.img} className="productImage"/>
+                    <img src={bike.img} alt="bike" className="productImage"/>
                     </Item>
                     <h3 className="productLabel">{bike.name}</h3>
                     </Grid>

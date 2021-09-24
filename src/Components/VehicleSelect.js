@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import TwoWheelerIcon from '@mui/icons-material/TwoWheeler';
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import IconButton from '@mui/material/IconButton';
-import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import { Box } from '@mui/system';
 import Button from '@mui/material/Button';
 import LocalGasStationIcon from '@mui/icons-material/LocalGasStation';
@@ -53,11 +52,6 @@ const VehicleSelect = ({setCurrentVehicle, setFuelEfficiency, fuelEfficiency, cu
 
     ];
 
-
-
-    function valuetext(value) {
-      return `${value}`;
-    }
     
 
     return (

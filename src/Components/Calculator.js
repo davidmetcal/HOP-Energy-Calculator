@@ -1,19 +1,19 @@
 import React from 'react';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import { styled } from '@mui/material/styles';
-import TableCell, { tableCellClasses } from '@mui/material/TableCell';
+// import Table from '@mui/material/Table';
+// import TableBody from '@mui/material/TableBody';
+// import TableContainer from '@mui/material/TableContainer';
+// import TableHead from '@mui/material/TableHead';
+// import TableRow from '@mui/material/TableRow';
+// import { styled } from '@mui/material/styles';
+// import TableCell, { tableCellClasses } from '@mui/material/TableCell';
 import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
+// import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import ElectricalServicesIcon from '@mui/icons-material/ElectricalServices';
 import ElectricBikeIcon from '@mui/icons-material/ElectricBike';
 import SavingsIcon from '@mui/icons-material/Savings';
-import EmojiTransportationIcon from '@mui/icons-material/EmojiTransportation';
+// import EmojiTransportationIcon from '@mui/icons-material/EmojiTransportation';
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import TwoWheelerIcon from '@mui/icons-material/TwoWheeler';
 import PickUp2 from './Pick-up2';
@@ -59,7 +59,6 @@ const efficencyPerKm = kWCapacityOfBattert / 60;
 
 //energy details
 const energyRequiredForDistanceDay = efficencyPerKm * distance;
-const costEnergy = energyRequiredForDistanceDay * kWhCost;
 
 //C02 e-vehicle
 
@@ -76,33 +75,33 @@ const moneySaving =  Math.round((fuelCostMonth * 12) - (costEnergyMonth * 12));
 
 // 14.3 from https://www.carbonindependent.org/17.html
 
-  const Item = styled(Paper)(({ theme }) => ({
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-  }));
+  // const Item = styled(Paper)(({ theme }) => ({
+  //   ...theme.typography.body2,
+  //   padding: theme.spacing(1),
+  //   textAlign: 'center',
+  //   color: theme.palette.text.secondary,
+  // }));
   
 
-  const StyledTableCell = styled(TableCell)(({ theme }) => ({
-    [`&.${tableCellClasses.head}`]: {
-      backgroundColor: "#59D0D3",
-      color: theme.palette.common.white,
-    },
-    [`&.${tableCellClasses.body}`]: {
-      fontSize: 14,
-    },
-  }));
+  // const StyledTableCell = styled(TableCell)(({ theme }) => ({
+  //   [`&.${tableCellClasses.head}`]: {
+  //     backgroundColor: "#59D0D3",
+  //     color: theme.palette.common.white,
+  //   },
+  //   [`&.${tableCellClasses.body}`]: {
+  //     fontSize: 14,
+  //   },
+  // }));
   
-  const StyledTableRow = styled(TableRow)(({ theme }) => ({
-    '&:nth-of-type(odd)': {
-      backgroundColor: theme.palette.action.hover,
-    },
-    // hide last border
-    '&:last-child td, &:last-child th': {
-      border: 0,
-    },
-  }));
+  // const StyledTableRow = styled(TableRow)(({ theme }) => ({
+  //   '&:nth-of-type(odd)': {
+  //     backgroundColor: theme.palette.action.hover,
+  //   },
+  //   // hide last border
+  //   '&:last-child td, &:last-child th': {
+  //     border: 0,
+  //   },
+  // }));
 
 
 

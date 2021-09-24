@@ -43,7 +43,7 @@ const EMotos = (props) => {
                     <Item
                     onClick={() => clickListener(bike)}
                     >
-                    <img src={bike.img} className="productImage"/>
+                    <img src={bike.img} alt="bike" className="productImage"/>
                     </Item>
                     <h3 className="productLabel">{bike.name}</h3>
                     </Grid>

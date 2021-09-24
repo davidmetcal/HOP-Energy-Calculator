@@ -12,7 +12,7 @@ import Products from './Products';
 import Calculator from './Calculator';
 
 
-const Steps = (props) => {
+const Steps = () => {
 
     const steps = ['Current Vehicle', 'How many km/day?', 'Type of E-Vehicle', 'Product', 'Results'];
 

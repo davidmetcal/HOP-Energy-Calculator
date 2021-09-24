@@ -2,8 +2,8 @@ import React, { useState} from 'react';
 import { experimentalStyled as styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
-import IconButton from '@mui/material/IconButton';
-import EarbudsBatteryIcon from '@mui/icons-material/EarbudsBattery';
+// import IconButton from '@mui/material/IconButton';
+// import EarbudsBatteryIcon from '@mui/icons-material/EarbudsBattery';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import FilterHdrOutlinedIcon from '@mui/icons-material/FilterHdrOutlined';
@@ -44,7 +44,7 @@ const EBikes = (props) => {
 
     if((name !== "E-Cross") && (name !== "E-Power")) {
 
-      const batteryArray = battery.match(/\d+([\/.]\d+)?/g)
+      const batteryArray = battery.match(/\d+([\/.]\d+)?/g);
       props.setBatteryCapacity(batteryArray[0] * batteryArray[1]);
       props.setActiveStep((prevActiveStep) => prevActiveStep + 1);
 
@@ -92,7 +92,7 @@ const EBikes = (props) => {
               <Grid className="productCard" item xs={2} sm={2} md={3} key={index}>
               <Item
               onClick={() => clickListener(bike)}>
-              <img src={bike.img}  className="productImage"/>
+              <img src={bike.img} alt="bike"  className="productImage"/>
               </Item>
               <h3 className="productLabel">{bike.name}</h3>
               </Grid>
