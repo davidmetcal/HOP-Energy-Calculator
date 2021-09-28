@@ -2,7 +2,6 @@ import React from 'react';
 import EBikes from './E-Bikes';
 import EScooter from './E-Scooter';
 import EMotos from './E-Motos';
-// import { PinDropSharp } from '@mui/icons-material';
 
 const Products = (props) => {
 

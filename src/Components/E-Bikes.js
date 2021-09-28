@@ -2,8 +2,6 @@ import React, { useState} from 'react';
 import { experimentalStyled as styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
-// import IconButton from '@mui/material/IconButton';
-// import EarbudsBatteryIcon from '@mui/icons-material/EarbudsBattery';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import FilterHdrOutlinedIcon from '@mui/icons-material/FilterHdrOutlined';
