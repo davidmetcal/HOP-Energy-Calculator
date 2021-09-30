@@ -2,9 +2,7 @@ import React from 'react'
 
 function Logo(props) {
     return (
-        <div className="inline">
-            <img src="Hop_Logos.png" alt="HOP logo" width={props.width} />
-        </div>
+            <img src="Hop_Logos.png" alt="HOP logo" className="logo" />
     )
 }
 

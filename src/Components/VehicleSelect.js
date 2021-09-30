@@ -58,7 +58,7 @@ const VehicleSelect = ({setCurrentVehicle, setFuelEfficiency, fuelEfficiency, cu
 
         <div>
         {!isSelected && (
-        <div className="container">
+        <div>
         <div className="buttonContain">
         <IconButton  onClick={() => {return clickListener("Moto")}} color="primary" >
         <TwoWheelerIcon  sx={{ fontSize: 85 }} />

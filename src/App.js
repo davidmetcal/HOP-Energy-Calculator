@@ -5,10 +5,10 @@ import Steps from './Components/Steps';
 
 function App() {
   return (
-    <div className="App">
+      <div id="app">
     
-    <Header />  
-      <div className="container">
+        <Header />  
+        <div className="container">
         <Title  />
 
         <Steps />

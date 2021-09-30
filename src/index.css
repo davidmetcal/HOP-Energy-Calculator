@@ -1,3 +1,8 @@
+#app {
+  width: 100%;
+  height: 100%;
+}
+/* 
 body {
   font-family: 'Roboto', sans-serif;
   background-image: url('cubes.png');
@@ -14,6 +19,12 @@ header{
   max-height: 110px;
   position: relative;
   top: -10px;
+} 
+
+@media (min-width: 992px) { 
+  header {
+    max-height: 150px;
+  }
 }
 
 .inline {
@@ -84,4 +95,33 @@ text-align: center;
 }
 .middleIcon{
   padding-top: 30px;
+} */
+
+header {
+  display: flex;
+  flex-direction: column;
+  background-color: #57D0D3;
+  margin: auto;
+  text-align: center;
+  color: white;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  margin: -9px -16px;
+}
+
+.logoContainer {
+  margin-top: 30px;
+  width: 100%;
+  height: 400px;
+}
+
+.logo {
+  min-height: 100%;
+}
+
+body {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  background-image: url('cubes.png');
+  color:rgba(0, 0, 0, 0.7);
+  background-color: #57d1d327;
 }

@@ -3,14 +3,16 @@ import Logo from './Logo';
 
 function Header() {
     return (
-        <div>
         <header>
-            <div className="content">
-            <Logo width="150" />
-            <h1 className="inline headerTitle">Energy Calculator</h1>
+            <div className="logoContainer">
+            <Logo />
+            </div>
+
+
+            <div className="headerText">
+            <h1>Energy Calculator</h1>
             </div>
         </header>
-        </div>
     )
 }
 
