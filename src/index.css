@@ -3,6 +3,34 @@
   height: 100%;
 }
 
+
+header {
+  display: flex;
+  flex-direction: column;
+  background-color: #57D0D3;
+  margin: auto;
+  text-align: center;
+  color: white;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  margin: -9px -16px;
+  align-items: center;
+  font-size: 2.3em;
+}
+
+.logo{
+  margin: 20px;
+  height: 500px;
+}
+
+body {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  background-image: url('cubes.png');
+  color:rgba(0, 0, 0, 0.7);
+  background-color: #57d1d327;
+}
+
+
 @media (min-width: 992px) { 
  body {
   font-family: 'Roboto', sans-serif;
@@ -17,108 +45,29 @@ header{
   margin: auto -16px;
   padding: 5px 32px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-  max-height: 110px;
+  max-height: 150px;
   position: relative;
   top: -10px;
-}
-.inline {
-  display: inline-block;
-}
-
-.headerTitle {
-  position: relative;
-  top: -25px;
-  left: 20px;
-}
-
-button {
-text-align: center;
-}
-
-.container {
-  text-align: center;
-}
-
-.stepContainer {
-  height: 150px;
-  margin-top: 50px;
-}
-
-.slider {
-  margin: auto;
-}
-
-.buttonContain {
-  display: inline-block;
-  padding: 0 50px;
-  margin-top: 2px;
-}
-
-.productAlign {
-  max-width: 90%;
-  margin: 0 auto;
-
-}
-
-.productImage {
-  position: relative;
-  top: -10px;
-  max-height: 140px;
-  max-width: 100%;
-}
-
-
-
-.preUnits {
-  font-size: 30px;
-}
-
-.units{
-  font-size: 12px;
-  font-style: italic;
-}
-
-.pickUp{
-  position: relative;
-  top: 4px;
-}
-
-.co2bike{
-  position: relative;
-  top: -20px;
-}
-.middleIcon{
-  padding-top: 30px;
-} 
-}
-
-
-
-header {
   display: flex;
-  flex-direction: column;
-  background-color: #57D0D3;
-  margin: auto;
-  text-align: center;
-  color: white;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-  margin: -9px -16px;
-}
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 1em;
 
-.logoContainer {
-  margin-top: 30px;
-  width: 100%;
-  height: 400px;
 }
 
 .logo {
-  min-height: 100%;
+  height: 100px;
+  width: auto;
 }
 
-body {
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
-  background-image: url('cubes.png');
-  color:rgba(0, 0, 0, 0.7);
-  background-color: #57d1d327;
+.headerText {
+  display: flex;
+  align-items: center;
 }
+
+
+
+
+}
+
+
