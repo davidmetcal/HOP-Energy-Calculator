@@ -2,8 +2,9 @@
   width: 100%;
   height: 100%;
 }
-/* 
-body {
+
+@media (min-width: 992px) { 
+ body {
   font-family: 'Roboto', sans-serif;
   background-image: url('cubes.png');
   color:rgba(0, 0, 0, 0.7);
@@ -19,14 +20,7 @@ header{
   max-height: 110px;
   position: relative;
   top: -10px;
-} 
-
-@media (min-width: 992px) { 
-  header {
-    max-height: 150px;
-  }
 }
-
 .inline {
   display: inline-block;
 }
@@ -95,7 +89,10 @@ text-align: center;
 }
 .middleIcon{
   padding-top: 30px;
-} */
+} 
+}
+
+
 
 header {
   display: flex;

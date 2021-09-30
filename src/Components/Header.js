@@ -3,7 +3,7 @@ import Logo from './Logo';
 
 function Header() {
     return (
-        <header>
+        <header className="inline">
             <div className="logoContainer">
             <Logo />
             </div>
