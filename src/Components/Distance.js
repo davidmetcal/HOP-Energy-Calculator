@@ -15,7 +15,7 @@ function changeListener(e) {
 
     return (
 
-            <Box width={400} className="slider">
+            <Box className="slider">
 
             <Slider
             onChange={changeListener}

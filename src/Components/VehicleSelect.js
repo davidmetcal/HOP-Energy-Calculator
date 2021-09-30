@@ -58,16 +58,16 @@ const VehicleSelect = ({setCurrentVehicle, setFuelEfficiency, fuelEfficiency, cu
 
         <div>
         {!isSelected && (
-        <div>
-        <div className="buttonContain">
+        <div className="container-three-icons">
+        <div className="buttonContain-large">
         <IconButton  onClick={() => {return clickListener("Moto")}} color="primary" >
-        <TwoWheelerIcon  sx={{ fontSize: 85 }} />
+        <TwoWheelerIcon className="svg_icons"  sx={{ fontSize: 300 }} />
         </IconButton>
         </div>
 
         <div className="buttonContain">
         <IconButton  onClick={() => {return clickListener("Car")}} color="primary">
-        <DirectionsCarIcon  sx={{ fontSize: 85 }} />
+        <DirectionsCarIcon className="svg_icons"  sx={{ fontSize: 300 }} />
         </IconButton>
         </div>
 

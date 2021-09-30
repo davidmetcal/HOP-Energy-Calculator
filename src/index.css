@@ -30,6 +30,27 @@ body {
   background-color: #57d1d327;
 }
 
+.container{
+  font-size: 1.5em;
+}
+
+.container-three-icons {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonContain-large{
+  margin-top: 20px;
+}
+
+.slider{
+ margin: auto;
+ min-width: 80%;
+
+}
+
+
+
 
 @media (min-width: 992px) { 
  body {
@@ -64,6 +85,21 @@ header{
   display: flex;
   align-items: center;
 }
+
+.container-three-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.svg_icons {
+  transform: scale(0.8);
+}
+
+.slider{
+  margin: auto;
+  min-width: 45%;
+ }
 
 
 

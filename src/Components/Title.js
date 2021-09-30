@@ -6,7 +6,7 @@ const Title = () => {
 
     return (
         <div>
-            <h1><CalculateIcon fontSize="large"/>  YOUR <MonetizationOnIcon fontSize="large" /></h1>
+            <h1><CalculateIcon sx={{ fontSize: 50 }} />  YOUR <MonetizationOnIcon sx={{ fontSize: 50 }}  /></h1>
             
         </div>
     )
