@@ -6,9 +6,32 @@ import { Box } from '@mui/system';
 import Button from '@mui/material/Button';
 import LocalGasStationIcon from '@mui/icons-material/LocalGasStation';
 import Slider from '@mui/material/Slider';
-import PickUp from './Pick-up';
+
 import styled from '@emotion/styled';
 import Typography from '@mui/material/Typography';
+import LocalShippingIcon from '@mui/icons-material/LocalShipping';
+
+const TwoWheelerIconMobile = styled(TwoWheelerIcon) `
+@media (min-width: 992px) {
+
+  font-size: 200px;
+}
+
+`;
+
+const DirectionsCarIconMobile = styled(DirectionsCarIcon) `
+@media (min-width: 992px) {
+
+  font-size: 200px;
+}
+
+`;
+
+const LocalShippingIconMobile = styled(LocalShippingIcon) `
+
+@media(min-width: 992px) {
+  font-size: 200px;
+}`
 
 const SliderComp = styled(Slider)`
 
@@ -113,19 +136,19 @@ const VehicleSelect = ({setCurrentVehicle, setFuelEfficiency, fuelEfficiency, cu
         <div className="container-three-icons">
         <div className="buttonContain-large">
         <IconButton  onClick={() => {return clickListener("Moto")}} color="primary" >
-        <TwoWheelerIcon className="svg_icons"  sx={{ fontSize: 300 }} />
+        <TwoWheelerIconMobile className="svg_icons"  sx={{ fontSize: 300 }} />
         </IconButton>
         </div>
 
-        <div className="buttonContain">
+        <div className="buttonContain-large">
         <IconButton  onClick={() => {return clickListener("Car")}} color="primary">
-        <DirectionsCarIcon className="svg_icons"  sx={{ fontSize: 300 }} />
+        <DirectionsCarIconMobile className="svg_icons"  sx={{ fontSize: 300 }} />
         </IconButton>
         </div>
 
-        <div className="buttonContain">
+        <div className="buttonContain-large">
         <IconButton  onClick={() => {return clickListener("Pickup")}} color="primary">
-        <PickUp />
+        <LocalShippingIconMobile className="svg_icons"  sx={{ fontSize: 300 }}/>
         </IconButton>
         </div>
         </div>

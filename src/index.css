@@ -38,11 +38,6 @@ body {
 .container-three-icons {
   display: flex;
   flex-direction: column;
-}
-
-.buttonContain{
-  display: flex;
-  flex-direction: column;
   justify-content: space-around;
 }
 

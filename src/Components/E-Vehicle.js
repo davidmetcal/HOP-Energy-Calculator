@@ -21,11 +21,11 @@ const EVehicle = (props) => {
         <div className = "buttonContain" >
         {eVehicles.map((name, index) => {
             return (
-        <div className = "buttonContain" >
+        <div >
         <IconButton  onClick={() => {return clickListener(name)}} color="primary" >
-        {name === "E-Scooter" &&  <ElectricScooterIcon color="primary"  sx={{ fontSize: 300 }} />}
-        {name === "E-Bike" && <ElectricBikeIcon color="primary" sx={{ fontSize: 300 }}/>}
-        {name === "E-Moto" && <ElectricMopedIcon color="primary" sx={{ fontSize: 300 }}/>}
+        {name === "E-Scooter" &&  <ElectricScooterIcon color="primary"  sx={{ fontSize: 250 }} />}
+        {name === "E-Bike" && <ElectricBikeIcon color="primary" sx={{ fontSize: 250 }}/>}
+        {name === "E-Moto" && <ElectricMopedIcon color="primary" sx={{ fontSize: 250 }}/>}
         </IconButton>
         </div>
             )
