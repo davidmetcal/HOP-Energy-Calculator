@@ -39,12 +39,25 @@ const SliderComp = styled(Slider)`
     }
 
     .MuiSlider-markLabel {
-      margin-top: 10px;
       font-size: 1.8em;
     }
 }
 `;
 
+const LocalGasStationIconMobile = styled(LocalGasStationIcon) `
+
+  @media (max-width: 992px) {
+    font-size: 4em;
+  }
+
+`
+
+const ButtonMobile = styled(Button) `
+
+@media (max-width: 992px) {
+    font-size: 1.5em;
+  }
+`
 
 
 
@@ -141,16 +154,14 @@ const VehicleSelect = ({setCurrentVehicle, setFuelEfficiency, fuelEfficiency, cu
         />
             </Box>
 
-            <div>
-            <LocalGasStationIcon className="inline" sx={{color: "#ba000d", fontSize: 30 }}/><p className="inline"><span className='preUnits'>{fuelEfficiency}</span><span className='units'>km/gallon</span></p>
+            <div inline>
+            <LocalGasStationIconMobile className="inline" sx={{color: "#ba000d", fontSize: 40 }}/>
+            <Typography variant="h2" component="h5">{fuelEfficiency}</Typography>
+            <Typography variant="h5">km/gallon</Typography>
             </div>
 
-          <Box sx={{ '& button': { m: 1 } }}>
-
-            <div>
-              <Button onClick={backVehicle}>Back to vehicles</Button>
-            </div>
-
+          <Box sx={{ '& button': { mt: 3 } }}>
+              <ButtonMobile onClick={backVehicle}>Back to vehicles</ButtonMobile>
           </Box>
           </div>
         )}
