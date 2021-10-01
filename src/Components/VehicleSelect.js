@@ -8,6 +8,7 @@ import LocalGasStationIcon from '@mui/icons-material/LocalGasStation';
 import Slider from '@mui/material/Slider';
 import PickUp from './Pick-up';
 import styled from '@emotion/styled';
+import Typography from '@mui/material/Typography';
 
 const SliderComp = styled(Slider)`
 
@@ -38,10 +39,13 @@ const SliderComp = styled(Slider)`
     }
 
     .MuiSlider-markLabel {
+      margin-top: 10px;
       font-size: 1.8em;
     }
 }
 `;
+
+
 
 
 const VehicleSelect = ({setCurrentVehicle, setFuelEfficiency, fuelEfficiency, currentVehicle}) => {
@@ -116,8 +120,13 @@ const VehicleSelect = ({setCurrentVehicle, setFuelEfficiency, fuelEfficiency, cu
 
         {isSelected && (
           <div>
-          <h2>Whats your fuel efficiency?</h2>
-          
+
+          <Typography
+          variant="h3"
+          component="div"
+          gutterBottom
+          sx={{m: 6}}
+          >Whats your fuel efficiency?</ Typography>
 
           <Box width={400} className="slider">
             <SliderComp
