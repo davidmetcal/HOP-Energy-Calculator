@@ -34,16 +34,16 @@ const EMotos = (props) => {
             
               <div className="productAlign">
       
-                <Box   sx={{ flexGrow: 1}}>  
-                  <Grid  container spacing={{ xs: 2, md: 3 }} columns={{ xs: 12, sm: 12, md: 12 }}>
+                <Box   sx={{ flexGrow: 1, mt:5}}>  
+                  <Grid  container spacing={{ xs: 2, md: 3 }} columns={{ xs: 12, sm: 12, md: 12, lg: 12 }}>
       
                   {motoImages.map((bike, index) => {
                   return  (
-                    <Grid className="productCard" item xs={4} sm={4} md={4} key={index}>
+                    <Grid className="productCard" item xs={4} sm={4} md={12} lg={4} key={index}>
                     <Item
                     onClick={() => clickListener(bike)}
                     >
-                    <img src={bike.img} alt="bike" className="productImage"/>
+                    <img src={bike.img} alt="bike" className="productImage" height="100%" />
                     </Item>
                     <h3 className="productLabel">{bike.name}</h3>
                     </Grid>

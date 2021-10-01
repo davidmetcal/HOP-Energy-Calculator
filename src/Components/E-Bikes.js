@@ -6,6 +6,8 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import FilterHdrOutlinedIcon from '@mui/icons-material/FilterHdrOutlined';
 
+
+
 const EBikes = (props) => {
 
   const [eCrossSelected, setECrossSelected] = useState(false);
@@ -22,6 +24,9 @@ const EBikes = (props) => {
   textAlign: 'center',
   color: theme.palette.text.secondary,
   height: 120,
+
+
+
 }));
 
   const clickListener = (e) => {
@@ -82,15 +87,15 @@ const EBikes = (props) => {
         <div className="productAlign">
 
         {showInitialForm && (
-          <Box   sx={{ flexGrow: 1}}>  
-            <Grid  container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+          <Box   sx={{ display: 'flex', mt: 5}}>  
+            <Grid  container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12, lg:12 }}>
 
             {bikeImage.map((bike, index) => {
             return  (
-              <Grid className="productCard" item xs={2} sm={2} md={3} key={index}>
+              <Grid className="productCard" item xs={2} sm={2} md={6} lg={4} key={index}>
               <Item
               onClick={() => clickListener(bike)}>
-              <img src={bike.img} alt="bike"  className="productImage"/>
+              <img src={bike.img} alt="bike"  className="productImage"  height="100%"/>
               </Item>
               <h3 className="productLabel">{bike.name}</h3>
               </Grid>

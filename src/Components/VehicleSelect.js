@@ -47,7 +47,7 @@ const SliderComp = styled(Slider)`
 const LocalGasStationIconMobile = styled(LocalGasStationIcon) `
 
   @media (max-width: 992px) {
-    font-size: 4em;
+    font-size: 3.6em;
   }
 
 `
@@ -154,13 +154,13 @@ const VehicleSelect = ({setCurrentVehicle, setFuelEfficiency, fuelEfficiency, cu
         />
             </Box>
 
-            <div inline>
+            <Box sx={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
             <LocalGasStationIconMobile className="inline" sx={{color: "#ba000d", fontSize: 40 }}/>
-            <Typography variant="h2" component="h5">{fuelEfficiency}</Typography>
-            <Typography variant="h5">km/gallon</Typography>
-            </div>
+            <Typography variant="h3" component="h5">{fuelEfficiency}</Typography>
+            <Typography variant="h5" sx={{ml: 1}}>km/gallon</Typography>
+            </Box>
 
-          <Box sx={{ '& button': { mt: 3 } }}>
+          <Box sx={{ '& button': { mt: 3 } }} >
               <ButtonMobile onClick={backVehicle}>Back to vehicles</ButtonMobile>
           </Box>
           </div>

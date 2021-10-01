@@ -40,6 +40,12 @@ body {
   flex-direction: column;
 }
 
+.buttonContain{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
 .buttonContain-large{
   margin-top: 20px;
 }
@@ -54,6 +60,11 @@ body {
 .vehicle-button {
   position: relative;
   top: 500px;
+}
+
+.fuel-detail {
+  display: flex;
+  flex-direction: row;
 }
 
 @media (min-width: 992px) { 
@@ -105,6 +116,12 @@ header{
   min-width: 45%;
   height: 70px;
  }
+
+ .buttonContain{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
 
 
 

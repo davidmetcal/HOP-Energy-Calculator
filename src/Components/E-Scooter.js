@@ -37,16 +37,16 @@ const EScooter = (props) => {
             
               <div className="productAlign">
       
-                <Box   sx={{ flexGrow: 1}}>  
-                  <Grid container spacing={{ xs: 12, md: 12 }} columns={{ xs: 12, sm: 12, md: 12 }}>
+                <Box   sx={{ flexGrow: 1, mt: 5}}>  
+                  <Grid container spacing={{ xs: 12, md: 12 }} columns={{ xs: 12, sm: 12, md: 12, lg:12 }}>
       
                   {scooterImage.map((bike, index) => {
 
                   return  (
-                    <Grid  className="productCard" item xs={12} sm={6} md={4} key={index}>
+                    <Grid  className="productCard" item xs={12} sm={6} md={12} lg={4} key={index}>
                     <Item
                     onClick={() => scooterClicked(bike)}>
-                    <img src={bike.img} alt="bike" className="productImage"/>
+                    <img src={bike.img} alt="bike" className="productImage" height="100%"/>
                     </Item>
                     <h3 className="productLabel">{bike.name}</h3>
                     </Grid>
