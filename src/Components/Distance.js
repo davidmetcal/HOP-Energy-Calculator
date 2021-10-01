@@ -18,6 +18,7 @@ function changeListener(e) {
             <Box className="slider">
 
             <Slider
+            
             onChange={changeListener}
              defaultValue={props.distance}
              value={props.distance} aria-label="Default" valueLabelDisplay="auto"/>

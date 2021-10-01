@@ -7,6 +7,41 @@ import Button from '@mui/material/Button';
 import LocalGasStationIcon from '@mui/icons-material/LocalGasStation';
 import Slider from '@mui/material/Slider';
 import PickUp from './Pick-up';
+import styled from '@emotion/styled';
+
+const SliderComp = styled(Slider)`
+
+@media (max-width: 992px) {
+
+
+  	.MuiSlider-rail {
+      height: 15px;
+    }
+
+    .MuiSlider-track	{
+      height: 20px;
+      
+    }
+
+    .MuiSlider-thumb  {
+      height: 50px;
+      width: 50px;
+    }
+
+    .MuiSlider-valueLabel {
+      font-size: 4em;
+    }
+
+    .MuiSlider-mark {
+      height: 10px;
+      width: 10px;
+    }
+
+    .MuiSlider-markLabel {
+      font-size: 1.8em;
+    }
+}
+`;
 
 
 const VehicleSelect = ({setCurrentVehicle, setFuelEfficiency, fuelEfficiency, currentVehicle}) => {
@@ -85,7 +120,9 @@ const VehicleSelect = ({setCurrentVehicle, setFuelEfficiency, fuelEfficiency, cu
           
 
           <Box width={400} className="slider">
-            <Slider
+            <SliderComp
+
+
             onChange={sliderChange}
             defaultValue={fuelEfficiency} 
             aria-label="Custom marks"

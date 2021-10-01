@@ -45,11 +45,10 @@ body {
 
 .slider{
  margin: auto;
- min-width: 80%;
+ min-width: 70%;
+ height: 150px;
 
 }
-
-
 
 
 @media (min-width: 992px) { 
@@ -99,6 +98,7 @@ header{
 .slider{
   margin: auto;
   min-width: 45%;
+  height: 70px;
  }
 
 

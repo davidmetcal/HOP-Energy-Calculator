@@ -1,11 +1,13 @@
 import Header from './Components/Header';
 import Title from './Components/Title';
 import Steps from './Components/Steps';
+import { ThemeProvider } from '@material-ui/core';
+import theme from "./Components/theme";
 
 
 function App() {
   return (
-      <div id="app">
+      <ThemeProvider theme={theme}>
     
         <Header />  
         <div className="container">
@@ -13,10 +15,10 @@ function App() {
 
         <Steps />
 
-      </div>
+       </div>
 
 
-    </div>
+       </ThemeProvider>
   );
 }
 
