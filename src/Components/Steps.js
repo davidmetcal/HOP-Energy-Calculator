@@ -15,9 +15,7 @@ import styled from '@emotion/styled';
 const ButtonMobile = styled(Button) `
   @media (max-width: 992px) {
     font-size: 2.2em;
-
   }
-
 `
 
 
@@ -81,7 +79,7 @@ const Steps = () => {
 
       <Box sx={{ width: '100%' }}>
 
-        <Stepper activeStep={activeStep}>
+        <Stepper alternativeLabel activeStep={activeStep}>
           {steps.map((label, index) => {
             const stepProps = {};
             const labelProps = {};
