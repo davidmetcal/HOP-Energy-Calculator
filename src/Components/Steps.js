@@ -10,6 +10,15 @@ import Distance from './Distance';
 import EVehicle from './E-Vehicle'
 import Products from './Products';
 import Calculator from './Calculator';
+import styled from '@emotion/styled';
+
+const ButtonMobile = styled(Button) `
+  @media (max-width: 992px) {
+    font-size: 2.2em;
+
+  }
+
+`
 
 
 const Steps = () => {
@@ -170,24 +179,24 @@ const Steps = () => {
           <React.Fragment>
             {/* <Typography sx={{ mt: 2, mb: 1 }}>Step {activeStep + 1}</Typography> */}
             <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
-              <Button
+              <ButtonMobile
                 color="inherit"
                 disabled={activeStep === 0}
                 onClick={handleBack}
                 sx={{ mr: 1 }}
               >
                 Back
-              </Button>
+              </ButtonMobile>
               <Box sx={{ flex: '1 1 auto' }} />
               {isStepOptional(activeStep) && (
-                <Button color="inherit" onClick={handleSkip} sx={{ mr: 1 }}>
+                <ButtonMobile color="inherit" onClick={handleSkip} sx={{ mr: 1 }}>
                   Skip
-                </Button>
+                </ButtonMobile>
               )}
   
-              <Button onClick={handleNext}>
+              <ButtonMobile onClick={handleNext}>
                 {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
-              </Button>
+              </ButtonMobile>
             </Box>
           </React.Fragment>
         )}
