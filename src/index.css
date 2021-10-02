@@ -62,6 +62,11 @@ body {
   flex-direction: row;
 }
 
+.mobile-button-container{
+  display: flex;
+  justify-content: space-evenly;
+}
+
 @media (min-width: 992px) { 
  body {
   font-family: 'Roboto', sans-serif;

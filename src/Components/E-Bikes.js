@@ -8,9 +8,32 @@ import FilterHdrOutlinedIcon from '@mui/icons-material/FilterHdrOutlined';
 import Typography from '@mui/material/Typography';
 
 
-
-
 const EBikes = (props) => {
+
+  const TypographyMobile = styled(Typography)(({theme}) => ({
+    [theme.breakpoints.down('lg')]: {
+      fontSize: "2.5em",
+    },
+  }))
+
+  const ButtonMobile = styled(Button)(({theme}) => ({
+    [theme.breakpoints.down('lg')]: {
+    fontSize: 60,
+    }
+  }))
+
+  const ButtonMobileBack = styled(Button)(({theme}) => ({
+    [theme.breakpoints.down('lg')]: {
+    fontSize: 30,
+    }
+  }))
+
+  const FilterHdrOutlinedIconMobile = styled(FilterHdrOutlinedIcon)(({theme}) => ({
+    [theme.breakpoints.down('lg')]: {
+      fontSize: 80,
+    }
+  }))
+
 
   const [eCrossSelected, setECrossSelected] = useState(false);
   const [ePowerSelected, setEPowerSelected] = useState(false);
@@ -89,6 +112,14 @@ const EBikes = (props) => {
         <div className="productAlign">
 
         {showInitialForm && (
+
+          <TypographyMobile variant="h4" sx={{mt:3}}>Select a HOP E-Bike</TypographyMobile>
+
+        )}
+
+
+
+        {showInitialForm && (
           <Box   sx={{ display: 'flex', mt: 5}}>  
             <Grid  container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12, lg:12 }}>
 
@@ -110,19 +141,21 @@ const EBikes = (props) => {
 
         {eCrossSelected && (
           <div>
-          <h2>Select E-Cross Motor Power </h2>
+
+          
+          <TypographyMobile variant="h4" sx={{mt:2, mb:2}}>Select E-Cross Motor Power</TypographyMobile>
 
           <Box sx={{ '& button': { m: 1 } }}>
 
-            <div>
-              <Button variant="outlined" size="large"
+            <div className="mobile-button-container">
+              <ButtonMobile variant="outlined" size="large"
               onClick={() => optionSelectorClick("250W")}>
-              <FilterHdrOutlinedIcon size="small"/>  250W 
-              </Button>
-              <Button variant="outlined" size="large"
+              <FilterHdrOutlinedIconMobile size="large"/>  250W 
+              </ButtonMobile>
+              <ButtonMobile variant="outlined" size="large"
               onClick={() => optionSelectorClick("500W")}>
-              <FilterHdrOutlinedIcon size="large"/>  500W
-              </Button>
+              <FilterHdrOutlinedIconMobile size="large"/>  500W
+              </ButtonMobile>
             </div>
 
             <div>
@@ -135,26 +168,27 @@ const EBikes = (props) => {
 
         {ePowerSelected && (
           <div>
-          <h2>Select E-Power Motor Power </h2>
+
+          <TypographyMobile variant="h4" sx={{mt:2, mb:2}}>Select E-Power Motor Power</TypographyMobile>
 
           <Box sx={{ '& button': { m: 1 } }}>
 
-            <div>
-              <Button
+            <div className="mobile-button-container">
+              <ButtonMobile
               onClick={() => optionSelectorClick("500W")}
                variant="outlined" size="large">
-              <FilterHdrOutlinedIcon size="small"/>  500W 
-              </Button>
-              <Button
+              <FilterHdrOutlinedIconMobile size="small"/>  500W 
+              </ButtonMobile>
+              <ButtonMobile
               onClick={() => optionSelectorClick("750W")}
                variant="outlined" size="large">
-              <FilterHdrOutlinedIcon size="large"/>  750W
-              </Button>
+              <FilterHdrOutlinedIconMobile size="large"/>  750W
+              </ButtonMobile>
             </div>
 
             <div>
-              <Button
-              onClick={backEBike}>Back to E-Bike</Button>
+              <ButtonMobileBack className="back-to-bike"
+              onClick={backEBike}>Back to E-Bike</ButtonMobileBack>
             </div>
 
           </Box>

@@ -142,10 +142,18 @@ const VehicleSelect = ({setCurrentVehicle, setFuelEfficiency, fuelEfficiency, cu
 
 
         <div>
-
-        <Box sx={{mt: 2}}>
-        <TypographyMobile variant="h4">What's your fuel efficiency?</TypographyMobile>
+        {!isSelected && (
+          <Box sx={{mt: 2}}>
+        <TypographyMobile variant="h4">Select your current vehicle</TypographyMobile>
         </Box>
+        )}
+
+        {isSelected && (
+          <Box sx={{mt: 2}}>
+        <TypographyMobile variant="h4">Select your fuel efficiency</TypographyMobile>
+        </Box>
+        )}
+
 
         {!isSelected && (
         <div className="container-three-icons">
