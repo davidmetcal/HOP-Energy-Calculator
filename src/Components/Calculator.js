@@ -16,6 +16,9 @@ import ElectricMopedIcon from '@mui/icons-material/ElectricMoped';
 import RedeemIcon from '@mui/icons-material/Redeem';
 import CarCO2 from './CarCO2';
 import Typography from '@mui/material/Typography';
+import Co2 from './co2';
+import Tree from './Tree';
+import Enviroment from './Enviroment';
 
 
 
@@ -87,119 +90,132 @@ const moneySaving =  Math.round((fuelCostMonth * 12) - (costEnergyMonth * 12));
 
             <Box>
             
-            <Grid>
+            <Grid display="flex" justifyContent="space-evenly" alignItems="center">
 
             <Grid item>
             <CarCO2 sx={{fontSize: 120, color: 'black'}} />
             <Typography variant="h6" sx={{mt:1}}> {carbonDioxideMonth} kg of C02 every month!</Typography>
             </Grid>
 
+            <Grid item >
+            {currentVehicle === "Car" && (
+              <Box display="flex"  alignItems="center">
+            <KeyboardArrowLeftIcon />
+            <DirectionsCarIcon sx={{fontSize: 60}} />
+            <KeyboardArrowRightIcon />
+            </Box>
+            )}
+
+            {currentVehicle === "Moto" && (
+              <Box display="flex"  alignItems="center">
+            <KeyboardArrowLeftIcon />
+            <TwoWheelerIcon sx={{fontSize: 60}} />
+            <KeyboardArrowRightIcon />
+            </Box>
+            )}
+
+            {currentVehicle === "Pickup" && (
+
+            <Box display="flex"  alignItems="center">
+            <KeyboardArrowLeftIcon />
+
+            <Pickup sx={{fontSize: 60}} />
+
+            <KeyboardArrowRightIcon />
+            </Box>
+
+
+            )}
+            
+            </Grid>
+
+            <Grid item>
+            <MonetizationOnIcon sx={{fontSize: 110, color: "black", mt:1}} />
+
+            <Typography variant="h6" sx={{mt:1}}>{fuelCostMonth} Q per month in fuel</Typography>
+
+
+            </Grid>
+
+            </Grid>
+
+            <Grid display='flex' justifyContent='space-evenly' alignItems='center' sx={{mt:5}}>
+
+            <Grid item>
+            <Grid display='flex' justifyContent='center' alignItems='center'>
+            <Co2 sx={{fontSize: 70, color: 'black'}} />
+            <ElectricBikeIcon sx={{fontSize: 120, color: "black"}} />
+            </Grid>
+            <Typography variant="h6" sx={{mt:1}}> {eVehicleC02} kg of C02 every month!</Typography>
+            </Grid>
+
+
+
+            <Grid item sx={{ml: 5}}>
+
+            {eVehicle === "E-Scooter" && (
+              <Box display="flex"  alignItems="center">
+                <KeyboardArrowLeftIcon />
+                <ElectricScooterIcon sx={{fontSize: 60}}/>
+                <KeyboardArrowRightIcon />
+                </Box>
+              )}
+
+              {eVehicle === "E-Bike" && (
+                <Box display="flex"  alignItems="center">
+                <KeyboardArrowLeftIcon />
+                <ElectricBikeIcon sx={{fontSize: 60}}/>
+                <KeyboardArrowRightIcon />
+                </Box>
+              )}
+
+              {eVehicle === "E-Moto" && (
+                <Box display="flex"  alignItems="center">
+                <KeyboardArrowLeftIcon />
+                <ElectricMopedIcon sx={{fontSize: 60}}/>
+                <KeyboardArrowRightIcon />
+                </Box>
+              )}
+
+
+            </Grid>
+
+            <Grid item>
+            <ElectricalServicesIcon sx={{fontSize: 120, color: "black"}}/>
+            <Typography variant="h6" >{costEnergyMonth} Q in electricity per month</Typography>
+
+            </Grid>
+
+            </Grid>
+
+            <Grid display='flex' justifyContent='space-evenly' alignItems='center' sx={{mt: 5}}>
+
+            <Grid item>
+            <Tree sx={{color: 'black', fontSize:120}} />
+            <Typography variant="h6">{treeSaving} trees a year</Typography>
+            </Grid>
+
+            <Grid item>
+            <Box display='flex' alignItems='center'>
+            <KeyboardArrowLeftIcon />
+            <Enviroment sx={{fontSize: 60}} />
+            <KeyboardArrowRightIcon />
+            </Box>
+
+            </Grid>
+
+            <Grid item display='flex' flexDirection='column' alignItems='center'>
+
+            <SavingsIcon sx={{fontSize: 120, color: "black"}}/>
+            <Typography variant='h6'> {moneySaving} Q a year</Typography>
+
+                
+            </Grid>
+
             </Grid>
 
             </Box>
 
-
-            <Box sx={{ flexGrow: 1 }} >
-            <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-            <Grid item xs={5} >
-            <img src="iconmonstr-car-14.png" alt="CO2 icon" />
-            <h4>You use {carbonDioxideMonth} kg of C02 every month!</h4>
-            </Grid>
-            <Grid item xs={2}>
-            
-            {currentVehicle === "Car" && (
-            <div className="middleIcon">
-            <KeyboardArrowLeftIcon />
-            <DirectionsCarIcon sx={{fontSize: 50}} />
-            <KeyboardArrowRightIcon />
-            </div>
-            )}
-
-            {currentVehicle === "Moto" && (
-              <div className="middleIcon">
-            <KeyboardArrowLeftIcon />
-            <TwoWheelerIcon sx={{fontSize: 50}} />
-            <KeyboardArrowRightIcon />
-            </div>
-            )}
-
-            {currentVehicle === "Pickup" && (
-            <div className="middleIcon">
-            <KeyboardArrowLeftIcon />
-            <Pickup />
-            <KeyboardArrowRightIcon />
-            </div>
-            )}
-            </Grid>
-
-            <Grid item xs={5}>
-            <MonetizationOnIcon sx={{fontSize: 90, color: "black"}} />
-                <h4>{fuelCostMonth} Q per month in fuel</h4>
-            </Grid>
-
-
-            <Grid item xs={5}>
-            <img src="iconmonstr-weather-91.png" alt="CO2 cloud icon" className="co2bike" />
-                <ElectricBikeIcon sx={{fontSize: 90, color: "black"}} />
-                <h4>{eVehicleC02} kg of C02 for E-bike</h4>
-            </Grid>
-           
-            <Grid item xs={2}>
-            
-              {eVehicle === "E-Scooter" && (
-                <div className="middleIcon">
-                <KeyboardArrowLeftIcon />
-                <ElectricScooterIcon sx={{fontSize: 50}}/>
-                <KeyboardArrowRightIcon />
-                </div>
-              )}
-
-              {eVehicle === "E-Bike" && (
-                <div className="middleIcon">
-                <KeyboardArrowLeftIcon />
-                <ElectricBikeIcon sx={{fontSize: 50}}/>
-                <KeyboardArrowRightIcon />
-                </div>
-              )}
-
-              {eVehicle === "E-Moto" && (
-                <div className="middleIcon">
-                <KeyboardArrowLeftIcon />
-                <ElectricMopedIcon sx={{fontSize: 50}}/>
-                <KeyboardArrowRightIcon />
-                </div>
-              )}
-
-
-
-            </Grid>
-            <Grid item xs={5}>
-            <ElectricalServicesIcon sx={{fontSize: 90, color: "black"}}/>
-
-            <h4>{costEnergyMonth} Q in electricity per month</h4>
-            </Grid>
-
-            <Grid item xs={5}>
-            <img src="iconmonstr-tree-2-240.png" alt="CO2 cloud icon" />
-                <h4>{treeSaving} trees a year</h4>
-            </Grid>
-           
-            <Grid item xs={2}>
-            <div className="middleIcon">
-                <KeyboardArrowLeftIcon />
-                <RedeemIcon sx={{fontSize: 50}}/>
-                <KeyboardArrowRightIcon />
-                </div>
-            </Grid>
-            <Grid item xs={5}>
-            <SavingsIcon sx={{fontSize: 90, color: "black"}}/>
-
-            <h4>{moneySaving} Q a year</h4>
-            </Grid>
-
-          </Grid>
-
-          </Box>
 
             </div>
 
