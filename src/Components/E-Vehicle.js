@@ -3,6 +3,18 @@ import IconButton from '@mui/material/IconButton';
 import ElectricBikeIcon from '@mui/icons-material/ElectricBike';
 import ElectricScooterIcon from '@mui/icons-material/ElectricScooter';
 import ElectricMopedIcon from '@mui/icons-material/ElectricMoped';
+import Box from '@mui/material/Box';
+import styled from '@emotion/styled';
+import Typography from '@mui/material/Typography';
+
+const TypographyMobile = styled(Typography) `
+
+@media (max-width: 992px) {
+  font-size: 2.5em;
+}
+
+`
+
 
 
 const EVehicle = (props) => {
@@ -18,7 +30,14 @@ const EVehicle = (props) => {
 
     return (
 
+        <div>
+
+        <Box sx={{mt: 4}}>
+        <TypographyMobile variant="h4">Which HOP vehicle are you interested in?</TypographyMobile>
+        </Box>
+
         <div className = "container-three-icons" >
+
         {eVehicles.map((name, index) => {
             return (
         <div className="buttonContain-large">
@@ -30,6 +49,7 @@ const EVehicle = (props) => {
         </div>
             )
         })}
+        </div>
         </div>
         
 

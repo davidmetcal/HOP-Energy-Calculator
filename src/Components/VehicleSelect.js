@@ -67,6 +67,14 @@ const SliderComp = styled(Slider)`
 }
 `;
 
+const TypographyMobile = styled(Typography) `
+
+@media (max-width: 992px) {
+  font-size: 2.5em;
+}
+
+`
+
 const LocalGasStationIconMobile = styled(LocalGasStationIcon) `
 
   @media (max-width: 992px) {
@@ -131,7 +139,14 @@ const VehicleSelect = ({setCurrentVehicle, setFuelEfficiency, fuelEfficiency, cu
 
     return (
 
+
+
         <div>
+
+        <Box sx={{mt: 2}}>
+        <TypographyMobile variant="h4">What's your fuel efficiency?</TypographyMobile>
+        </Box>
+
         {!isSelected && (
         <div className="container-three-icons">
         <div className="buttonContain-large">
@@ -157,14 +172,8 @@ const VehicleSelect = ({setCurrentVehicle, setFuelEfficiency, fuelEfficiency, cu
         {isSelected && (
           <div>
 
-          <Typography
-          variant="h3"
-          component="div"
-          gutterBottom
-          sx={{m: 6}}
-          >Whats your fuel efficiency?</ Typography>
 
-          <Box width={400} className="slider">
+          <Box width={400} className="slider" sx={{mt:5}}>
             <SliderComp
 
 

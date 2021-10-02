@@ -54,11 +54,12 @@ const TypographyMobile = styled(Typography) `
 `;
 
 const BoxMobile = styled(Box) `
-    margin-top: 2em;
-    width: 50%;
+    margin-top: 1em;
+    width: 45%;
+
 @media (max-width: 992px) {
-    margin-top: 6em;
-    width: 80%;
+    margin-top: 1em;
+    width: 70%;
     height: 12em;
 
 }
@@ -83,8 +84,14 @@ function changeListener(e) {
 }
 
     return (
+            <div>
+
+            <Box sx={{mt: 4}}>
+            <TypographyMobile variant="h4">How many km every day?</TypographyMobile>
+            </Box>
 
             <BoxMobile className="slider">
+
 
             <SliderComp
             
@@ -96,6 +103,7 @@ function changeListener(e) {
             <TypographyMobileUnits variant="h5" mt={2} ml={1} >km/day</TypographyMobileUnits>
             </Box>
             </BoxMobile>
+            </div>
     );
 }
 
