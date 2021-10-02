@@ -106,6 +106,10 @@ header{
   transform: scale(0.8);
 }
 
+.svg_icons-evehicles {
+  transform: scale(0.6);
+}
+
 .slider{
   margin: auto;
   min-width: 45%;

@@ -18,14 +18,14 @@ const EVehicle = (props) => {
 
     return (
 
-        <div className = "buttonContain" >
+        <div className = "container-three-icons" >
         {eVehicles.map((name, index) => {
             return (
-        <div >
+        <div className="buttonContain-large">
         <IconButton  onClick={() => {return clickListener(name)}} color="primary" >
-        {name === "E-Scooter" &&  <ElectricScooterIcon color="primary"  sx={{ fontSize: 250 }} />}
-        {name === "E-Bike" && <ElectricBikeIcon color="primary" sx={{ fontSize: 250 }}/>}
-        {name === "E-Moto" && <ElectricMopedIcon color="primary" sx={{ fontSize: 250 }}/>}
+        {name === "E-Scooter" &&  <ElectricScooterIcon color="primary" className="svg_icons-evehicles"  sx={{ fontSize: 300 }} />}
+        {name === "E-Bike" && <ElectricBikeIcon color="primary" className="svg_icons-evehicles" sx={{ fontSize: 300 }}/>}
+        {name === "E-Moto" && <ElectricMopedIcon color="primary" className="svg_icons-evehicles" sx={{ fontSize: 300 }}/>}
         </IconButton>
         </div>
             )

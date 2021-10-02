@@ -41,9 +41,14 @@ const SliderComp = styled(Slider)`
 `;
 
 const TypographyMobile = styled(Typography) `
+
+
 @media (max-width: 992px) {
 
-    font-size: 4em;
+
+    font-size: 3.2em
+
+
 }
 
 `;
@@ -57,6 +62,13 @@ const BoxMobile = styled(Box) `
     height: 12em;
 
 }
+`;
+
+const TypographyMobileUnits = styled(Typography) `
+  @media (max-width: 992px) {
+    font-size: 2em;
+}
+
 `
 
 const Distance = (props) => {
@@ -79,8 +91,10 @@ function changeListener(e) {
             onChange={changeListener}
              defaultValue={props.distance}
              value={props.distance} aria-label="Default" valueLabelDisplay="auto"/>
-
-            <TypographyMobile variant="h3" component="h5" mt={2} >{props.distance} km/day</TypographyMobile>
+            <Box sx={{display:'flex', justifyContent: 'center', alignItems:'center'}}>
+            <TypographyMobile variant="h3" component="h4" mt={2} >{props.distance} </TypographyMobile>
+            <TypographyMobileUnits variant="h5" mt={2} ml={1} >km/day</TypographyMobileUnits>
+            </Box>
             </BoxMobile>
     );
 }
