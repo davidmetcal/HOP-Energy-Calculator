@@ -6,10 +6,10 @@ import { Box } from '@mui/system';
 import Button from '@mui/material/Button';
 import LocalGasStationIcon from '@mui/icons-material/LocalGasStation';
 import Slider from '@mui/material/Slider';
-
 import styled from '@emotion/styled';
 import Typography from '@mui/material/Typography';
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
+import Pickup from './Pickup';
 
 const TwoWheelerIconMobile = styled(TwoWheelerIcon) `
 @media (min-width: 992px) {
@@ -27,7 +27,7 @@ const DirectionsCarIconMobile = styled(DirectionsCarIcon) `
 
 `;
 
-const LocalShippingIconMobile = styled(LocalShippingIcon) `
+const LocalShippingIconMobile= styled(LocalShippingIcon) `
 
 @media(min-width: 992px) {
   font-size: 200px;
@@ -139,9 +139,10 @@ const VehicleSelect = ({setCurrentVehicle, setFuelEfficiency, fuelEfficiency, cu
 
     return (
 
-
+    
 
         <div>
+
         {!isSelected && (
           <Box sx={{mt: 2}}>
         <TypographyMobile variant="h4">Select your current vehicle</TypographyMobile>
@@ -170,8 +171,8 @@ const VehicleSelect = ({setCurrentVehicle, setFuelEfficiency, fuelEfficiency, cu
         </div>
 
         <div className="buttonContain-large">
-        <IconButton  onClick={() => {return clickListener("Pickup")}} color="primary">
-        <LocalShippingIconMobile className="svg_icons"  sx={{ fontSize: 300 }}/>
+        <IconButton  onClick={() => {return clickListener("Pickup")}} color="primary" >
+        <Pickup className="svg_icons"  sx={{ fontSize: 220 }}/>
         </IconButton>
         </div>
         </div>

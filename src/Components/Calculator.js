@@ -1,18 +1,21 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
+import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import ElectricalServicesIcon from '@mui/icons-material/ElectricalServices';
 import ElectricBikeIcon from '@mui/icons-material/ElectricBike';
 import SavingsIcon from '@mui/icons-material/Savings';
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import TwoWheelerIcon from '@mui/icons-material/TwoWheeler';
-import PickUp2 from './Pick-up2';
+import Pickup from './Pickup';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import ElectricScooterIcon from '@mui/icons-material/ElectricScooter';
 import ElectricMopedIcon from '@mui/icons-material/ElectricMoped';
 import RedeemIcon from '@mui/icons-material/Redeem';
+import CarCO2 from './CarCO2';
+import Typography from '@mui/material/Typography';
 
 
 
@@ -80,7 +83,21 @@ const moneySaving =  Math.round((fuelCostMonth * 12) - (costEnergyMonth * 12));
       ];
 
     return (
-                <div>
+            <div>
+
+            <Box>
+            
+            <Grid>
+
+            <Grid item>
+            <CarCO2 sx={{fontSize: 120, color: 'black'}} />
+            <Typography variant="h6" sx={{mt:1}}> {carbonDioxideMonth} kg of C02 every month!</Typography>
+            </Grid>
+
+            </Grid>
+
+            </Box>
+
 
             <Box sx={{ flexGrow: 1 }} >
             <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
@@ -109,14 +126,14 @@ const moneySaving =  Math.round((fuelCostMonth * 12) - (costEnergyMonth * 12));
             {currentVehicle === "Pickup" && (
             <div className="middleIcon">
             <KeyboardArrowLeftIcon />
-            <PickUp2 />
+            <Pickup />
             <KeyboardArrowRightIcon />
             </div>
             )}
             </Grid>
 
             <Grid item xs={5}>
-            <AttachMoneyIcon sx={{fontSize: 90, color: "black"}} />
+            <MonetizationOnIcon sx={{fontSize: 90, color: "black"}} />
                 <h4>{fuelCostMonth} Q per month in fuel</h4>
             </Grid>
 

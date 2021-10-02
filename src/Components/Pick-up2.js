@@ -9,3 +9,4 @@ const PickUp2 = () => {
 }
 
 export default PickUp2
+
