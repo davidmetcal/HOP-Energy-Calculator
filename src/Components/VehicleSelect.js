@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import TwoWheelerIcon from '@mui/icons-material/TwoWheeler';
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import IconButton from '@mui/material/IconButton';
-import { Box } from '@mui/system';
+import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import LocalGasStationIcon from '@mui/icons-material/LocalGasStation';
 import Slider from '@mui/material/Slider';
@@ -152,7 +152,7 @@ const VehicleSelect = ({setCurrentVehicle, setFuelEfficiency, fuelEfficiency, cu
         <div>
 
         {!isSelected && (
-          <Box sx={{mt: 5}}>
+        <Box sx={{mt: 5}}>
         <TypographyMobile variant="h4">Select your current vehicle</TypographyMobile>
         </Box>
         )}
