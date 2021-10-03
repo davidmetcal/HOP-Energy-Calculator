@@ -19,10 +19,61 @@ import Typography from '@mui/material/Typography';
 import Co2 from './co2';
 import Tree from './Tree';
 import Enviroment from './Enviroment';
-
-
+import styled from '@emotion/styled';
 
 const Calculator = (props) => {
+
+  const CarCO2Mobile = styled(CarCO2) `
+    @media (max-width: 992px) {
+      font-size: 11em;
+    }
+  
+  `
+  const MonetizationOnIconMobile = styled(MonetizationOnIcon) `
+  @media (max-width: 992px) {
+    font-size: 11em;
+  }
+
+`
+const Co2Mobile = styled(Co2) `
+@media (max-width: 992px) {
+  font-size: 4em;
+
+}
+
+`
+
+const ElectricBikeIconMobile = styled(ElectricBikeIcon) `
+@media (max-width: 992px) {
+  font-size: 8em;
+}
+`
+
+const ElectricalServicesIconMobile = styled(ElectricalServicesIcon) `
+@media (max-width: 992px) {
+  font-size: 11em;
+}
+
+`
+
+  const TypographyMobile = styled(Typography) `
+  @media (max-width: 992px) {
+    font-size: 1em;
+  }
+
+`
+
+const TreeMobile = styled(Tree) `
+  @media (max-width: 992px) {
+    font-size: 11em;
+  }
+`
+
+const SavingsIconMobile = styled(SavingsIcon) `
+  @media (max-width: 992px) {
+    font-size: 11em;
+  }
+`
 
   const {currentVehicle, fuelEfficiency, distance, eVehicle, product, batteryCapacity} = props;
 
@@ -90,11 +141,11 @@ const moneySaving =  Math.round((fuelCostMonth * 12) - (costEnergyMonth * 12));
 
             <Box>
             
-            <Grid display="flex" justifyContent="space-evenly" alignItems="center">
+            <Grid display="flex" justifyContent="space-evenly" alignItems="center" sx={{mt:5}} >
 
             <Grid item>
-            <CarCO2 sx={{fontSize: 120, color: 'black'}} />
-            <Typography variant="h6" sx={{mt:1}}> {carbonDioxideMonth} kg of C02 every month!</Typography>
+            <CarCO2Mobile sx={{fontSize: 120, color: 'black'}} />
+            <TypographyMobile variant="h6" sx={{mt:1}}> {carbonDioxideMonth} kg/month!</TypographyMobile>
             </Grid>
 
             <Grid item >
@@ -130,9 +181,9 @@ const moneySaving =  Math.round((fuelCostMonth * 12) - (costEnergyMonth * 12));
             </Grid>
 
             <Grid item>
-            <MonetizationOnIcon sx={{fontSize: 110, color: "black", mt:1}} />
+            <MonetizationOnIconMobile sx={{fontSize: 110, color: "black", mt:1}} />
 
-            <Typography variant="h6" sx={{mt:1}}>{fuelCostMonth} Q per month in fuel</Typography>
+            <TypographyMobile variant="h6" sx={{mt:1}}>Q {fuelCostMonth} /month</TypographyMobile>
 
 
             </Grid>
@@ -141,17 +192,17 @@ const moneySaving =  Math.round((fuelCostMonth * 12) - (costEnergyMonth * 12));
 
             <Grid display='flex' justifyContent='space-evenly' alignItems='center' sx={{mt:5}}>
 
-            <Grid item>
+            <Grid item sx={{ml: -3}}>
             <Grid display='flex' justifyContent='center' alignItems='center'>
-            <Co2 sx={{fontSize: 70, color: 'black'}} />
-            <ElectricBikeIcon sx={{fontSize: 120, color: "black"}} />
+            <Co2Mobile sx={{fontSize: 70, color: 'black'}} />
+            <ElectricBikeIconMobile sx={{fontSize: 120, color: "black"}} />
             </Grid>
-            <Typography variant="h6" sx={{mt:1}}> {eVehicleC02} kg of C02 every month!</Typography>
+            <TypographyMobile variant="h6" sx={{mt:1}}> {eVehicleC02} kg/month!</TypographyMobile>
             </Grid>
 
 
 
-            <Grid item sx={{ml: 5}}>
+            <Grid item sx={{ml: -4}}>
 
             {eVehicle === "E-Scooter" && (
               <Box display="flex"  alignItems="center">
@@ -181,8 +232,8 @@ const moneySaving =  Math.round((fuelCostMonth * 12) - (costEnergyMonth * 12));
             </Grid>
 
             <Grid item>
-            <ElectricalServicesIcon sx={{fontSize: 120, color: "black"}}/>
-            <Typography variant="h6" >{costEnergyMonth} Q in electricity per month</Typography>
+            <ElectricalServicesIconMobile sx={{fontSize: 120, color: "black"}}/>
+            <TypographyMobile variant="h6" >Q {costEnergyMonth} /month</TypographyMobile>
 
             </Grid>
 
@@ -191,8 +242,8 @@ const moneySaving =  Math.round((fuelCostMonth * 12) - (costEnergyMonth * 12));
             <Grid display='flex' justifyContent='space-evenly' alignItems='center' sx={{mt: 5}}>
 
             <Grid item>
-            <Tree sx={{color: 'black', fontSize:120}} />
-            <Typography variant="h6">{treeSaving} trees a year</Typography>
+            <TreeMobile sx={{color: 'black', fontSize:120}} />
+            <TypographyMobile variant="h6">{treeSaving} trees/year</TypographyMobile>
             </Grid>
 
             <Grid item>
@@ -204,14 +255,13 @@ const moneySaving =  Math.round((fuelCostMonth * 12) - (costEnergyMonth * 12));
 
             </Grid>
 
-            <Grid item display='flex' flexDirection='column' alignItems='center'>
+            <Grid item >
 
-            <SavingsIcon sx={{fontSize: 120, color: "black"}}/>
-            <Typography variant='h6'> {moneySaving} Q a year</Typography>
+            <SavingsIconMobile sx={{fontSize: 120, color: "black"}}/>
+            <TypographyMobile variant='h6'> Q {moneySaving} / year</TypographyMobile>
 
                 
             </Grid>
-
             </Grid>
 
             </Box>

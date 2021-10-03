@@ -87,7 +87,7 @@ function changeListener(e) {
             <div>
 
             <Box sx={{mt: 4}}>
-            <TypographyMobile variant="h4">How many km every day?</TypographyMobile>
+            <TypographyMobile variant="h4">Distance per day?</TypographyMobile>
             </Box>
 
             <BoxMobile className="slider">

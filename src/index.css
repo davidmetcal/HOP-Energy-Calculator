@@ -38,7 +38,7 @@ body {
 .container-three-icons {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .buttonContain-large{
@@ -105,7 +105,7 @@ header{
 .container-three-icons {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .svg_icons {

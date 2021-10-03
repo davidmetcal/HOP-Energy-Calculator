@@ -33,7 +33,7 @@ const EVehicle = (props) => {
         <div>
 
         <Box sx={{mt: 4}}>
-        <TypographyMobile variant="h4">Which HOP vehicle are you interested in?</TypographyMobile>
+        <TypographyMobile variant="h4">Type of HOP E-Vehicle?</TypographyMobile>
         </Box>
 
         <div className = "container-three-icons" >
@@ -42,9 +42,9 @@ const EVehicle = (props) => {
             return (
         <div className="buttonContain-large">
         <IconButton  onClick={() => {return clickListener(name)}} color="primary" >
-        {name === "E-Scooter" &&  <ElectricScooterIcon color="primary" className="svg_icons-evehicles"  sx={{ fontSize: 300 }} />}
-        {name === "E-Bike" && <ElectricBikeIcon color="primary" className="svg_icons-evehicles" sx={{ fontSize: 300 }}/>}
-        {name === "E-Moto" && <ElectricMopedIcon color="primary" className="svg_icons-evehicles" sx={{ fontSize: 300 }}/>}
+        {name === "E-Scooter" &&  <ElectricScooterIcon color="primary" className="svg_icons-evehicles"  sx={{ fontSize: 200 }} />}
+        {name === "E-Bike" && <ElectricBikeIcon color="primary" className="svg_icons-evehicles" sx={{ fontSize: 200 }}/>}
+        {name === "E-Moto" && <ElectricMopedIcon color="primary" className="svg_icons-evehicles" sx={{ fontSize: 200 }}/>}
         </IconButton>
         </div>
             )

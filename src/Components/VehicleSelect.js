@@ -67,6 +67,14 @@ const SliderComp = styled(Slider)`
 }
 `;
 
+const PickupMobile = styled(Pickup) `
+
+@media (max-width: 992px) {
+    font-size: 13em;
+  }
+
+`
+
 const TypographyMobile = styled(Typography) `
 
 @media (max-width: 992px) {
@@ -144,13 +152,13 @@ const VehicleSelect = ({setCurrentVehicle, setFuelEfficiency, fuelEfficiency, cu
         <div>
 
         {!isSelected && (
-          <Box sx={{mt: 2}}>
+          <Box sx={{mt: 5}}>
         <TypographyMobile variant="h4">Select your current vehicle</TypographyMobile>
         </Box>
         )}
 
         {isSelected && (
-          <Box sx={{mt: 2}}>
+        <Box sx={{mt: 5}}>
         <TypographyMobile variant="h4">Select your fuel efficiency</TypographyMobile>
         </Box>
         )}
@@ -172,7 +180,7 @@ const VehicleSelect = ({setCurrentVehicle, setFuelEfficiency, fuelEfficiency, cu
 
         <div className="buttonContain-large">
         <IconButton  onClick={() => {return clickListener("Pickup")}} color="primary" >
-        <Pickup className="svg_icons"  sx={{ fontSize: 220 }}/>
+        <PickupMobile className="svg_icons"  sx={{ fontSize: 220 }}/>
         </IconButton>
         </div>
         </div>
