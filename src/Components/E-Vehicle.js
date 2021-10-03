@@ -15,6 +15,24 @@ const TypographyMobile = styled(Typography) `
 
 `
 
+const ElectricScooterIconMobile = styled(ElectricScooterIcon) `
+@media (max-width: 992px) {
+  font-size: 13em;
+}
+`
+
+const ElectricBikeIconMobile = styled(ElectricBikeIcon) `
+@media (max-width: 992px) {
+  font-size: 13em;
+}
+`
+
+const ElectricMopedIconMobile = styled(ElectricMopedIcon) `
+@media (max-width: 992px) {
+  font-size: 13em;
+}
+`
+
 
 
 const EVehicle = (props) => {
@@ -42,9 +60,9 @@ const EVehicle = (props) => {
             return (
         <div className="buttonContain-large">
         <IconButton  onClick={() => {return clickListener(name)}} color="primary" >
-        {name === "E-Scooter" &&  <ElectricScooterIcon color="primary" className="svg_icons-evehicles"  sx={{ fontSize: 200 }} />}
-        {name === "E-Bike" && <ElectricBikeIcon color="primary" className="svg_icons-evehicles" sx={{ fontSize: 200 }}/>}
-        {name === "E-Moto" && <ElectricMopedIcon color="primary" className="svg_icons-evehicles" sx={{ fontSize: 200 }}/>}
+        {name === "E-Scooter" &&  <ElectricScooterIconMobile color="primary" className="svg_icons-evehicles"  sx={{ fontSize: 200 }} />}
+        {name === "E-Bike" && <ElectricBikeIconMobile color="primary" className="svg_icons-evehicles" sx={{ fontSize: 200 }}/>}
+        {name === "E-Moto" && <ElectricMopedIconMobile color="primary" className="svg_icons-evehicles" sx={{ fontSize: 200 }}/>}
         </IconButton>
         </div>
             )

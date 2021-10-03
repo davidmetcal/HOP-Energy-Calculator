@@ -58,7 +58,7 @@ const ElectricalServicesIconMobile = styled(ElectricalServicesIcon) `
 
   const TypographyMobile = styled(Typography) `
   @media (max-width: 992px) {
-    font-size: 1em;
+    font-size: 2em;
   }
 
 `
